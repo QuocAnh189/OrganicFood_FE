@@ -1,10 +1,11 @@
 export interface IUser {
   _id?: string;
   email: string;
+  name: string;
   avatar: string;
-  firstname: string;
-  lastname: string;
-  fullname: string;
-  dob: Date;
-  refreshToken: string;
+  phone: string;
+  password: string;
+  isActive: boolean;
+  addresses: string;
+  role: string;
 }
