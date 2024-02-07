@@ -4,5 +4,6 @@ export interface IStore {
   image: string;
   description: string;
   address: string;
+  rates: string[];
   voucher: string[];
 }

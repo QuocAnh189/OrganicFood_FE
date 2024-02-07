@@ -10,6 +10,7 @@ import {
   PURGE,
   REGISTER
 } from 'redux-persist';
+import createWebStorage from 'redux-persist/lib/storage/createWebStorage';
 import storage from 'redux-persist/lib/storage';
 
 //slices
@@ -32,9 +33,26 @@ import { apiUser } from './services/userApi';
 import { apiVendor } from './services/vendorApi';
 import { apiVoucher } from './services/voucherApi';
 
+const createNoopStorage = () => {
+  return {
+    getItem(_key: string) {
+      return Promise.resolve(null);
+    },
+    setItem(_key: string, value: string) {
+      return Promise.resolve(value);
+    },
+    removeItem(_key: string) {
+      return Promise.resolve();
+    }
+  };
+};
+
 const persistConfig = {
   key: 'root',
-  storage: storage,
+  storage:
+    typeof window !== 'undefined'
+      ? createWebStorage('local')
+      : createNoopStorage(),
   whitelist: [AuthSliceKey],
   blacklist: []
 };
