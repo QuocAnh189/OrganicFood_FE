@@ -16,7 +16,21 @@ import storage from 'redux-persist/lib/storage';
 import authReducer, { AuthSliceKey } from './slices/authSlice';
 
 //api
+import { apIAddress } from './services/addressApi';
 import { apiAuth } from './services/authApi';
+import { apiCart } from './services/cartApi';
+import { apiCategory } from './services/categoryApi';
+import { apiOrder } from './services/orderApi';
+import { apiOrderItem } from './services/orderItemApi';
+import { apiPayment } from './services/paymentApi';
+import { apiProduct } from './services/productApi';
+import { apiPromotion } from './services/promotionApi';
+import { apiRate } from './services/rateApi';
+import { apiShipper } from './services/shipperApi';
+import { apiStore } from './services/storeApi';
+import { apiUser } from './services/userApi';
+import { apiVendor } from './services/vendorApi';
+import { apiVoucher } from './services/voucherApi';
 
 const persistConfig = {
   key: 'root',
@@ -28,7 +42,21 @@ const persistConfig = {
 const combinedReducer = combineReducers({
   [AuthSliceKey]: authReducer,
 
-  [apiAuth.reducerPath]: apiAuth.reducer
+  [apiAuth.reducerPath]: apiAuth.reducer,
+  [apIAddress.reducerPath]: apIAddress.reducer,
+  [apiCart.reducerPath]: apiCart.reducer,
+  [apiCategory.reducerPath]: apiCategory.reducer,
+  [apiOrder.reducerPath]: apiOrder.reducer,
+  [apiOrderItem.reducerPath]: apiOrderItem.reducer,
+  [apiPayment.reducerPath]: apiPayment.reducer,
+  [apiProduct.reducerPath]: apiProduct.reducer,
+  [apiPromotion.reducerPath]: apiPromotion.reducer,
+  [apiRate.reducerPath]: apiRate.reducer,
+  [apiShipper.reducerPath]: apiShipper.reducer,
+  [apiStore.reducerPath]: apiStore.reducer,
+  [apiUser.reducerPath]: apiUser.reducer,
+  [apiVendor.reducerPath]: apiVendor.reducer,
+  [apiVoucher.reducerPath]: apiVoucher.reducer
 });
 
 const rootReducer = (state: any, action: any) => {
@@ -54,7 +82,8 @@ const store = configureStore({
           PURGE,
           REGISTER,
           'socket/createSocket',
-          'apiAuth/executeMutation/fulfilled'
+          'apiAuth/executeMutation/fulfilled',
+          'apiUser/executeMutation/fulfilled'
         ],
         ignoredActionPaths: [
           'socket.socket',
@@ -76,7 +105,23 @@ const store = configureStore({
           'items.data'
         ]
       }
-    }).concat([apiAuth.middleware])
+    }).concat([
+      apiAuth.middleware,
+      apIAddress.middleware,
+      apiCart.middleware,
+      apiCategory.middleware,
+      apiOrder.middleware,
+      apiOrderItem.middleware,
+      apiPayment.middleware,
+      apiProduct.middleware,
+      apiPromotion.middleware,
+      apiRate.middleware,
+      apiShipper.middleware,
+      apiStore.middleware,
+      apiUser.middleware,
+      apiVendor.middleware,
+      apiVoucher.middleware
+    ])
 });
 
 setupListeners(store.dispatch);
