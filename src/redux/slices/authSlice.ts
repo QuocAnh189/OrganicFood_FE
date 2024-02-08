@@ -21,7 +21,7 @@ const authSlice = createSlice({
     signUp: (state, action: PayloadAction<IAuth>) => {
       state.authData = action.payload;
     },
-    signOut: (state, action: PayloadAction<IAuth>) => {
+    signOut: state => {
       state.authData = undefined;
     }
   }

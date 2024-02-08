@@ -14,18 +14,26 @@ export const apiAuth = createApi({
         url: '/auth/signin',
         method: 'POST',
         body: data
-      })
+      }),
+      transformResponse(data: any) {
+        return data.data;
+      }
     }),
+
     signUp: builder.mutation<IAuth, SignUpType>({
       query: data => ({
         url: '/auth/signup',
         method: 'POST',
         body: data
-      })
+      }),
+      transformResponse(data: any) {
+        return data.data;
+      }
     }),
+
     signOut: builder.mutation<void, string>({
       query: userId => ({
-        url: `/auth/${userId}`,
+        url: `/auth/signout/${userId}`,
         method: 'POST'
       })
     })

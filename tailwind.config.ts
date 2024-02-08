@@ -1,3 +1,4 @@
+import { error } from 'console';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -21,7 +22,8 @@ const config: Config = {
       black: '#333333',
       white: '#FFFFFF',
       gray200: '#F2F2F2',
-      gray500: '#808080'
+      gray500: '#808080',
+      error: '#FF004D'
     }
   },
   plugins: []
