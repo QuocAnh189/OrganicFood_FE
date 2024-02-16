@@ -1,3 +1,6 @@
+import { forwardRef, useRef } from 'react';
+
+//chakra
 import {
   FormControl,
   FormLabel,
@@ -9,11 +12,12 @@ import {
   useDisclosure,
   useMergeRefs
 } from '@chakra-ui/react';
-import { forwardRef, useRef } from 'react';
+
+//icons
 import { HiEye, HiEyeOff } from 'react-icons/hi';
 
 export const PasswordField = forwardRef<HTMLInputElement, InputProps>(
-  (props, ref) => {
+  (props: any, ref) => {
     const { isOpen, onToggle } = useDisclosure();
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -27,7 +31,9 @@ export const PasswordField = forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <FormControl>
-        <FormLabel htmlFor="password">Password</FormLabel>
+        <FormLabel htmlFor="password">
+          {props.id === 'password' ? 'Password' : 'Confirm Password'}
+        </FormLabel>
         <InputGroup>
           <InputRightElement>
             <IconButton

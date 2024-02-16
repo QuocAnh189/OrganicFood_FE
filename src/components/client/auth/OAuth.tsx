@@ -39,26 +39,34 @@ const GitHubIcon = createIcon({
   )
 });
 
-const TwitterIcon = createIcon({
-  displayName: 'TwitterIcon',
+const FacebookIcon = createIcon({
+  displayName: 'FacebookIcon',
   path: (
     <path
       fill="#03A9F4"
-      d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+      d="M8.258,4.458c0-0.144,0.02-0.455,0.06-0.931c0.043-0.477,0.223-0.976,0.546-1.5c0.32-0.522,0.839-0.991,1.561-1.406
+                C11.144,0.208,12.183,0,13.539,0h3.82v4.163h-2.797c-0.277,0-0.535,0.104-0.768,0.309c-0.231,0.205-0.35,0.4-0.35,0.581v2.59h3.914
+                c-0.041,0.507-0.086,1-0.138,1.476l-0.155,1.258c-0.062,0.425-0.125,0.819-0.187,1.182h-3.462v11.542H8.258V11.558H5.742V7.643
+                h2.516V4.458z"
     />
   )
 });
 
 const providers = [
   { name: 'Google', icon: <GoogleIcon /> },
-  { name: 'Twitter', icon: <TwitterIcon /> },
-  { name: 'GitHub', icon: <GitHubIcon /> }
+  { name: 'GitHub', icon: <GitHubIcon /> },
+  { name: 'Facebook', icon: <FacebookIcon /> }
 ];
 
 export const OAuthButtonGroup = () => (
   <ButtonGroup variant="secondary" spacing="4">
     {providers.map(({ name, icon }) => (
-      <Button key={name} flexGrow={1}>
+      <Button
+        key={name}
+        flexGrow={1}
+        border="1px"
+        _hover={{ bgColor: 'gray.100' }}
+      >
         <VisuallyHidden>Sign in with {name}</VisuallyHidden>
         {icon}
       </Button>

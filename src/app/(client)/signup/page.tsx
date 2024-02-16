@@ -35,7 +35,7 @@ import { useAppDispatch } from '@/redux/hooks';
 import { signUp } from '@/redux/slices/authSlice';
 
 //component
-import { PasswordField } from '@/components/client/PasswordFiled';
+import { PasswordField } from '@/components/client/auth/PasswordFiled';
 
 //constant
 import { PASSWORD_REGEX } from '@/constants';
@@ -216,13 +216,11 @@ const SignIn = () => {
               >
                 {isLoading ? <CircularProgress size="24px" /> : 'Sign Up'}
               </Button>
-              <Center>
-                <Text color="fg.muted">
-                  Already have an account?{' '}
-                  <Link href="/signin" className="text-primary">
-                    Sign in
-                  </Link>
-                </Text>
+              <Center gap={1}>
+                Already have an account ?
+                <Link href="/signin">
+                  <Text color="#00B207">Sign in</Text>
+                </Link>
               </Center>
             </Stack>
           </FormControl>

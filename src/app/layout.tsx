@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 //component
-import Header from '@/components/client/Header';
-import Search from '@/components/client/Search';
-import Navbar from '@/components/client/Navbar';
-import Footer from '@/components/client/Footer';
+import Header from '@/components/client/layout/Header';
+import Search from '@/components/client/layout/Search';
+import Navbar from '@/components/client/layout/Navbar';
+import Footer from '@/components/client/layout/Footer';
 
 export default function RootLayout({
   children

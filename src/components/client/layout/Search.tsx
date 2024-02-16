@@ -48,7 +48,7 @@ const Search = () => {
               border="1px solid #949494"
               backgroundColor={'#00B207'}
               color="#FFFFFF"
-              _hover={{backgroundColor:'#74E291'}}
+              _hover={{ backgroundColor: '#74E291' }}
             >
               Search
             </Button>
@@ -65,10 +65,12 @@ const Search = () => {
               <p className="text-sm text-white">2</p>
             </Center>
           </div>
-          <div className="flex flex-col items-start">
-            <p className="text-sm">Shopping Cart</p>
-            <p className="text-sm font-bold">$57.00</p>
-          </div>
+          <Link href="/cart">
+            <div className="flex flex-col items-start">
+              <p className="text-sm">Shopping Cart</p>
+              <p className="text-sm font-bold">$57.00</p>
+            </div>
+          </Link>
         </button>
       </div>
     </div>
