@@ -13,7 +13,8 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'my-image': "url('../assets/images/bg.png')"
+        'my-image': "url('../assets/images/bg.png')",
+        'my-header': "url('../assets/images/breadcrumbs.png')"
       }
     },
     colors: {
@@ -22,6 +23,7 @@ const config: Config = {
       black: '#333333',
       white: '#FFFFFF',
       gray200: '#F2F2F2',
+      gray300: '#E6E6E6',
       gray500: '#808080',
       error: '#FF004D'
     }

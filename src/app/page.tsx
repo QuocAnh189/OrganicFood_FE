@@ -10,11 +10,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
 import { Pagination, Navigation } from 'swiper/modules';
 
 //component
-import BannerHome from '@/components/client/BannerHome';
+import BannerHome from '@/components/client/home/BannerHome';
 
 const Home = () => {
   return (

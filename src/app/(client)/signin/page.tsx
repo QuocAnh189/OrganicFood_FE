@@ -38,8 +38,8 @@ import { useAppDispatch } from '@/redux/hooks';
 import { signIn } from '@/redux/slices/authSlice';
 
 //component
-import { OAuthButtonGroup } from '@/components/client/OAuth';
-import { PasswordField } from '@/components/client/PasswordFiled';
+import { OAuthButtonGroup } from '@/components/client/auth/OAuth';
+import { PasswordField } from '@/components/client/auth/PasswordFiled';
 
 //toast
 import { useToast } from '@chakra-ui/react';
@@ -161,10 +161,11 @@ const SignIn = () => {
               >
                 {isLoading ? <CircularProgress size="24px" /> : 'Sign in'}
               </Button>
-              <Center>
-                <Text color="fg.muted">
-                  Don't have an account? <Link href="/signup">Sign up</Link>
-                </Text>
+              <Center gap={1}>
+                Don't have an account ?
+                <Link href="/signup">
+                  <Text color="#00B207">Sign up</Text>
+                </Link>
               </Center>
               <HStack>
                 <Divider />
