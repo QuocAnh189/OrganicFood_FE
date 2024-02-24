@@ -1,113 +1,323 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+//next
+import Image from 'next/image';
+import Link from 'next/link';
+
+//component
+import { Banner, FeatureService } from '@/components/client/home';
+import { Branch, CardCategory, Feedback } from '@/components/common';
+import { CardBlog } from '@/components/client/blog';
+import { CardProduct, CardProductSmall } from '@/components/client/product';
+
+//icons
+import { FaArrowRightLong, FaCheck } from 'react-icons/fa6';
+
+//image
+import twoman from '@/assets/images/twoman.png';
+
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="relative w-full min-h-screen pt-4">
+      <div className="flex z-[1] items-center justify-center w-full h-[510px] bg-my-image bg-cover">
+        <Banner />
+      </div>
+
+      <div className="w-full flex flex-col bg-white gap-14 pb-12">
+        <FeatureService />
+        <div className="flex flex-col gap-6 justify-center bg-white px-[150px]">
+          <div className="w-full flex items-center justify-between">
+            <p className="text-black font-semibold text-3xl">
+              Featured Product
+            </p>
+            <div className="flex items-center gap-2">
+              <p className="text-primary">View all</p>
+              <FaArrowRightLong color="#00B207" />
+            </div>
+          </div>
+          <div className="flex items-center justify-center gap-4">
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="w-full flex flex-col items-center bg-gray300 gap-14 py-12">
+        <div className="w-full flex flex-col gap-6 justify-center px-[150px] ">
+          <div className="w-full flex items-center justify-between">
+            <p className="text-black font-semibold text-3xl">Top Categories</p>
+            <div className="flex items-center gap-2">
+              <p className="text-primary">View all</p>
+              <FaArrowRightLong color="#00B207" />
+            </div>
+          </div>
+          <div className="flex items-center justify-center gap-4">
+            <CardCategory />
+            <CardCategory />
+            <CardCategory />
+            <CardCategory />
+            <CardCategory />
+          </div>
+        </div>
+        <div className="w-full flex items-center justify-center gap-8 px-[150px]">
+          <Image
+            src={twoman}
+            alt=""
+            height={600}
+            width={600}
+            style={{ objectFit: 'cover' }}
+          />
+          <div className="flex-1 flex flex-col justify-center gap-6">
+            <h1 className="text-black font-bold text-4xl">
+              100% Trusted <br />
+              Organic Food Store
+            </h1>
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="p-[5px] bg-primary rounded-full">
+                    <FaCheck color="white" />
+                  </div>
+                  <p className="text-black font-medium">
+                    Healthy & natural food for lovers of healthy food.
+                  </p>
+                </div>
+                <div className="pl-8">
+                  <p className="text-gray500">
+                    Ut quis tempus erat. Phasellus euismod bibendum magna non
+                    tristique. Pellentesque semper vestibulum elit sed
+                    condimentum. Nunc pretium fermentum interdum.{' '}
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="p-[5px] bg-primary rounded-full">
+                    <FaCheck color="white" />
+                  </div>
+                  <p className="text-black font-medium">
+                    Every day fresh and quality products for you.
+                  </p>
+                </div>
+                <div className="pl-8">
+                  <p className="text-gray500">
+                    Maecenas vehicula a justo quis laoreet. Sed in placerat
+                    nibh, a posuere ex. Morbi sem neque, aliquam sed orci et,
+                    rhoncus lobortis felis. Sed vestibulum nisl sit amet sapien.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <Link
+              href=""
+              className="w-[160px] bg-primary text-white flex items-center justify-center gap-2 px-4 py-2 rounded-3xl font-medium"
+            >
+              Shop Now
+              <FaArrowRightLong />
+            </Link>
+          </div>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className="flex items-center justify-center gap-6 bg-my-subbghome w-full h-[300px] bg-cover px-[200px]">
+        <div className="flex flex-col items-center justify-center gap-2 w-[240px] h-[160px] rounded-md bg-green100">
+          <p className="text-primary text-3xl font-medium">37+</p>
+          <p className="text-white">Year of Hard Word</p>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="flex flex-col items-center justify-center gap-2 w-[240px] h-[160px] rounded-md bg-green100">
+          <p className="text-primary text-3xl font-medium">37+</p>
+          <p className="text-white">Year of Hard Word</p>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <div className="flex flex-col items-center justify-center gap-2 w-[240px] h-[160px] rounded-md bg-green100">
+          <p className="text-primary text-3xl font-medium">28</p>
+          <p className="text-white">Qualified Team Member</p>
+        </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className="flex flex-col items-center justify-center gap-2 w-[240px] h-[160px] rounded-md bg-green100">
+          <p className="text-primary text-3xl font-medium">750k +</p>
+          <p className="text-white">Monthly Orders</p>
+        </div>
       </div>
-    </main>
+
+      <div className="flex flex-col gap-6 justify-center bg-white px-[150px] py-12">
+        <div className="w-full flex items-center justify-between">
+          <div className="relative flex items-center">
+            <Image
+              src="https://res.cloudinary.com/dadvtny30/image/upload/v1708181447/organicfood/voucher/k8m92cqwmwpuu7vykjn4.png"
+              alt=""
+              width={600}
+              height={200}
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="absolute z-10 flex flex-col gap-4 pl-8">
+              <div>
+                <p className="text-white">100% ORGANIC</p>
+                <p className="text-white text-3xl">Fruit & Vegetable</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <p className="text-gray500">Starting at: </p>
+                <div className="px-2 py-1 bg-orange rounded-md text-white">
+                  $11.99
+                </div>
+              </div>
+              <Link
+                href=""
+                className="w-[160px] bg-primary text-white flex items-center justify-center gap-2 px-4 py-2 rounded-3xl font-medium"
+              >
+                Shop Now
+                <FaArrowRightLong />
+              </Link>
+            </div>
+          </div>
+          <div className="relative flex items-center">
+            <Image
+              src="https://res.cloudinary.com/dadvtny30/image/upload/v1708181446/organicfood/voucher/wl296lpijssgdmtvsr9c.png"
+              alt=""
+              width={600}
+              height={200}
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="absolute z-10 flex flex-col gap-4 pl-8">
+              <div>
+                <p className="text-white">SALE OFF THE WEEK</p>
+                <p className="text-white text-3xl">Sales of the Year</p>
+              </div>
+              <div className="flex gap-3">
+                <div className=" flex flex-col items-center text-white">
+                  <p className="text-xl">00</p>
+                  <p className="text-gray300 text-[12px]">DAYS</p>
+                </div>
+
+                <div className="text-white">:</div>
+
+                <div className=" flex flex-col items-center text-white">
+                  <p className="text-xl">02</p>
+                  <p className="text-gray300 text-[12px]">HOURS</p>
+                </div>
+
+                <div className="text-white">:</div>
+
+                <div className=" flex flex-col items-center text-white">
+                  <p className="text-xl">18</p>
+                  <p className="text-gray300 text-[12px]">MINS</p>
+                </div>
+
+                <div className="text-white">:</div>
+
+                <div className=" flex flex-col items-center text-white">
+                  <p className="text-xl">46</p>
+                  <p className="text-gray300 text-[12px]">SECS</p>
+                </div>
+              </div>
+              <Link
+                href=""
+                className="w-[160px] bg-primary text-white flex items-center justify-center gap-2 px-4 py-2 rounded-3xl font-medium"
+              >
+                Shop Now
+                <FaArrowRightLong />
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="w-full flex items-center justify-between">
+          <p className="text-black font-semibold text-3xl">Featured Product</p>
+          <div className="flex items-center gap-2">
+            <p className="text-primary">View all</p>
+            <FaArrowRightLong color="#00B207" />
+          </div>
+        </div>
+        <div className="flex items-center justify-center gap-4">
+          <CardProduct />
+          <CardProduct />
+          <CardProduct />
+          <CardProduct />
+          <CardProduct />
+        </div>
+        <div className="flex justify-between">
+          <div className="flex-1 flex justify-between">
+            <div className="h-full flex flex-col gap-2 justify-between">
+              <h1 className="text-black text-xl font-semibold">Hot Deals</h1>
+              <div className="flex flex-col gap-4">
+                <CardProductSmall />
+                <CardProductSmall />
+                <CardProductSmall />
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 flex justify-between">
+            <div className="h-full flex flex-col gap-2 justify-between">
+              <h1 className="text-black text-xl font-semibold">Best Seller</h1>
+              <div className="flex flex-col gap-4">
+                <CardProductSmall />
+                <CardProductSmall />
+                <CardProductSmall />
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 flex justify-between">
+            <div className="h-full flex flex-col gap-2 justify-between">
+              <h1 className="text-black text-xl font-semibold">Top Rated</h1>
+              <div className="flex flex-col gap-4">
+                <CardProductSmall />
+                <CardProductSmall />
+                <CardProductSmall />
+              </div>
+            </div>
+          </div>
+          <div className="relative">
+            <Image
+              src="https://res.cloudinary.com/dadvtny30/image/upload/v1708181444/organicfood/voucher/sfblxq3imrpk48vt9o3p.png"
+              alt=""
+              width={300}
+              height={200}
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="absolute left-[25%] top-6 flex flex-col items-center gap-4">
+              <p className="text-[12px]">HOT SALE</p>
+              <p className="text-2xl">
+                Save 37% on <br />
+                Every Order{' '}
+              </p>
+              <Link
+                href=""
+                className="w-[160px] bg-white text-primary flex items-center justify-center gap-2 px-4 py-2 rounded-3xl font-medium"
+              >
+                Shop Now
+                <FaArrowRightLong />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center px-[150px] gap-8 pt-12 pb-40">
+        <div className="flex flex-col items-center">
+          <p className="text-primary">Blog</p>
+          <h1 className="text-black font-bold text-2xl">Latest News</h1>
+        </div>
+        <div className="flex items-center justify-center gap-4">
+          <CardBlog />
+          <CardBlog />
+          <CardBlog />
+        </div>
+      </div>
+
+      <div className="flex flex-col justify-center gap-6 px-[150px] py-12 bg-gray200">
+        <h1 className="font-semibold text-3xl">What Our Customer Says</h1>
+        <div className="grid grid-flow-col">
+          <Feedback />
+          <Feedback />
+          <Feedback />
+        </div>
+      </div>
+      <Branch />
+    </div>
   );
-}
+};
+
+export default Home;
