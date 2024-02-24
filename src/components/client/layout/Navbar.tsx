@@ -10,7 +10,7 @@ import { FaPhoneVolume } from 'react-icons/fa6';
 //constant
 import { routes } from '@/constants';
 
-const Navbar = () => {
+export const Navbar = () => {
   const path = usePathname();
 
   return (
@@ -35,5 +35,3 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;

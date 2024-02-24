@@ -38,8 +38,7 @@ import { useAppDispatch } from '@/redux/hooks';
 import { signIn } from '@/redux/slices/authSlice';
 
 //component
-import { OAuthButtonGroup } from '@/components/client/auth/OAuth';
-import { PasswordField } from '@/components/client/auth/PasswordFiled';
+import { OAuthButtonGroup, PasswordField } from '@/components/client/auth';
 
 //toast
 import { useToast } from '@chakra-ui/react';

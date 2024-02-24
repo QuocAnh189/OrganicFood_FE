@@ -4,7 +4,7 @@
 import { usePathname } from 'next/navigation';
 
 //components
-import BreadCrumb from '@/components/client/layout/Breadcrumb';
+import { BreadCrumb } from '@/components/client/layout';
 
 const Shop = () => {
   const path = usePathname();

@@ -35,7 +35,7 @@ import { useAppDispatch } from '@/redux/hooks';
 import { signUp } from '@/redux/slices/authSlice';
 
 //component
-import { PasswordField } from '@/components/client/auth/PasswordFiled';
+import { PasswordField } from '@/components/client/auth';
 
 //constant
 import { PASSWORD_REGEX } from '@/constants';

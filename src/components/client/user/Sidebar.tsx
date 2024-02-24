@@ -13,7 +13,7 @@ import { BiPurchaseTag } from 'react-icons/bi';
 
 const route = [{}];
 
-const Sidebar = () => {
+export const Sidebar = () => {
   const path = usePathname();
 
   return (
@@ -77,5 +77,3 @@ const Sidebar = () => {
     </div>
   );
 };
-
-export default Sidebar;

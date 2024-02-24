@@ -12,7 +12,7 @@ import { PiMapPinLineLight, PiPhoneCallThin } from 'react-icons/pi';
 import { CiMail } from 'react-icons/ci';
 
 //component
-import BreadCrumb from '@/components/client/layout/Breadcrumb';
+import { BreadCrumb } from '@/components/client/layout';
 
 const containerStyle = {
   width: '100%',

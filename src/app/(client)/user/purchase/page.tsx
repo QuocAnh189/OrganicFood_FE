@@ -1,13 +1,16 @@
+//chakra
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 
 //component
-import AllPurchase from '@/components/client/purchase/AllPurchase';
-import PayPurchase from '@/components/client/purchase/PayPurchase';
-import ShipPurchase from '@/components/client/purchase/ShipPurchase';
-import ReceivePurchase from '@/components/client/purchase/ReceivePurchase';
-import CompletePurchase from '@/components/client/purchase/CompletePurchase';
-import CancelPurchase from '@/components/client/purchase/CancelPurchase';
-import RefundPurchase from '@/components/client/purchase/RefundPurchase';
+import {
+  AllPurchase,
+  PayPurchase,
+  ShipPurchase,
+  ReceivePurchase,
+  CompletePurchase,
+  CancelPurchase,
+  RefundPurchase
+} from '@/components/client/purchase';
 
 const Purchase = () => {
   return (
