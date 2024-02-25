@@ -10,16 +10,19 @@ interface BreadCrumbsProps {
 export const BreadCrumb = (props: BreadCrumbsProps) => {
   const { path, subpath } = props;
 
+  const displayPath =
+    path.charAt(1).toUpperCase() + path.replace('/', '').slice(1);
+
   return (
     <div className="flex items-center bg-my-header w-full h-[80px] bg-cover">
       <div className="flex gap-2 px-[150px] items-center">
         <MdOutlineHome color="white" size={20} />
         <span className="text-white">{' > '}</span>
         <Link
-          href="/blog"
-          className="text-primary cursor-default hover:underline"
+          href={`/${displayPath.toLowerCase()}`}
+          className="text-primary cursor-default hover:underline hover:cursor-pointer "
         >
-          {path.charAt(1).toUpperCase() + path.replace('/', '').slice(1)}
+          {displayPath}
         </Link>
         {subpath && (
           <div className="flex items-center gap-2">
