@@ -22,7 +22,7 @@ import { IoCartOutline } from 'react-icons/io5';
 //image
 import logo from '@/assets/images/logo.png';
 
-const Search = () => {
+export const Search = () => {
   return (
     <div className="flex bg-white text-black items-center justify-between px-[150px] py-3">
       <Link href="/" className="flex items-center gap-2">
@@ -76,5 +76,3 @@ const Search = () => {
     </div>
   );
 };
-
-export default Search;

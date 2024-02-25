@@ -14,7 +14,7 @@ import { useAppSelector, useAppDispatch } from '@/redux/hooks';
 import { useSignOutMutation } from '@/redux/services/authApi';
 import { signOut } from '@/redux/slices/authSlice';
 
-const Header = () => {
+export const Header = () => {
   const dispatch = useAppDispatch();
   const auth = useAppSelector(state => state.auth.authData);
 
@@ -90,5 +90,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

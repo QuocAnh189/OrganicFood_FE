@@ -5,14 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 //component
-import {
-  Banner,
-  FeatureProduct,
-  FeatureService
-} from '@/components/client/home';
-import { FooterAbout } from '@/components/client/about';
-import { CardCategory, Feedback } from '@/components/common';
-import { CardBlog } from '@/components/client/blog/CardBlog';
+import { Banner, FeatureService } from '@/components/client/home';
+import { Branch, CardCategory, Feedback } from '@/components/common';
+import { CardBlog } from '@/components/client/blog';
 import { CardProduct, CardProductSmall } from '@/components/client/product';
 
 //icons
@@ -30,7 +25,24 @@ const Home = () => {
 
       <div className="w-full flex flex-col bg-white gap-14 pb-12">
         <FeatureService />
-        <FeatureProduct />
+        <div className="flex flex-col gap-6 justify-center bg-white px-[150px]">
+          <div className="w-full flex items-center justify-between">
+            <p className="text-black font-semibold text-3xl">
+              Featured Product
+            </p>
+            <div className="flex items-center gap-2">
+              <p className="text-primary">View all</p>
+              <FaArrowRightLong color="#00B207" />
+            </div>
+          </div>
+          <div className="flex items-center justify-center gap-4">
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+          </div>
+        </div>
       </div>
 
       <div className="w-full flex flex-col items-center bg-gray300 gap-14 py-12">
@@ -295,8 +307,15 @@ const Home = () => {
         </div>
       </div>
 
-      <Feedback />
-      <FooterAbout />
+      <div className="flex flex-col justify-center gap-6 px-[150px] py-12 bg-gray200">
+        <h1 className="font-semibold text-3xl">What Our Customer Says</h1>
+        <div className="grid grid-flow-col">
+          <Feedback />
+          <Feedback />
+          <Feedback />
+        </div>
+      </div>
+      <Branch />
     </div>
   );
 };

@@ -9,7 +9,6 @@ import {
   Button,
   Input,
   InputGroup,
-  InputLeftElement,
   InputRightAddon,
   Divider,
   Center
@@ -26,7 +25,7 @@ import discoverPay from '@/assets/images/discover.png';
 import masterCart from '@/assets/images/masterCart.png';
 import secureCart from '@/assets/images/secureCart.png';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <>
       <div className="flex bg-gray200 items-center justify-between px-[150px] py-6">
@@ -169,5 +168,3 @@ const Footer = () => {
     </>
   );
 };
-
-export default Footer;
