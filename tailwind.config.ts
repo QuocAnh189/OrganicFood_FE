@@ -29,10 +29,10 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'my-image': "url('../assets/images/bg.png')",
-        'my-header': "url('../assets/images/breadcrumbs.png')",
-        'my-subbghome': "url('../assets/images/subbghome.png')"
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
+        // 'my-image': "url('../assets/images/bg.png')",
+        // 'my-header': "url('../assets/images/breadcrumbs.png')",
+        // 'my-subbghome': "url('../assets/images/subbghome.png')"
       }
     },
     colors: {
