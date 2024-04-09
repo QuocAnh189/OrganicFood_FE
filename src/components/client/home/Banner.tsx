@@ -2,9 +2,9 @@
 import Image from 'next/image';
 
 //image
-import image1 from '@/assets/images/bg1.png';
-import image2 from '@/assets/images/bg2.png';
-import image3 from '@/assets/images/bg3.png';
+import image1 from '@/assets/images/BG1.png';
+import image2 from '@/assets/images/BG2.png';
+import image3 from '@/assets/images/BG3.png';
 
 //icon
 import { FaArrowRight } from 'react-icons/fa';
