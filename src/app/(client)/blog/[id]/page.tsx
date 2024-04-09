@@ -28,7 +28,7 @@ const BlogDetails = () => {
 
   return (
     <div className="">
-      <BreadCrumb path={path.slice(0, 5)} subpath="SingleBlog" />
+      <BreadCrumb path={path} />
       <div className="flex px-[150px] bg-white gap-8 pt-8">
         <div className="w-2/3 flex flex-col gap-4">
           <Image

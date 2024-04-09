@@ -157,7 +157,7 @@ const Rate = () => {
             onChange={e => console.log(e.target.value)}
           >
             <div className="flex items-center gap-2">
-              <div className="flex items-center gap-1">
+              <div className="flex items-center">
                 {rate.value.map((value, index) => (
                   <MdStarRate
                     key={index}

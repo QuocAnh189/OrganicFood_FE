@@ -26,7 +26,15 @@ const BannerItem = (props: BannerItemProps) => {
 
   return (
     <div className="w-full flex items-center justify-center px-6 gap-6">
-      {left && <Image src={image} alt="" className="w-2/5 object-cover" />}
+      {left && (
+        <Image
+          src={image}
+          height={0}
+          width={0}
+          alt=""
+          className="w-2/5 object-cover"
+        />
+      )}
       <div className="flex flex-col items-start gap-4">
         <p className="text-primary text-md">WELCOME TO SHOPERY</p>
         <h1 className="text-black text-6xl font-bold">Fresh & Healthy</h1>
@@ -42,7 +50,15 @@ const BannerItem = (props: BannerItemProps) => {
           <FaArrowRight color="white" />
         </button>
       </div>
-      {!left && <Image src={image} alt="" className="w-2/5 object-cover" />}
+      {!left && (
+        <Image
+          src={image}
+          height={0}
+          width={0}
+          alt=""
+          className="w-2/5 object-cover"
+        />
+      )}
     </div>
   );
 };

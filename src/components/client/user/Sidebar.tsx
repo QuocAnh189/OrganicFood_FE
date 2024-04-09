@@ -17,7 +17,7 @@ export const Sidebar = () => {
   const path = usePathname();
 
   return (
-    <div className="border border-solid border-gray300 rounded-md">
+    <div className="border-[2px] border-solid border-gray300 rounded-md">
       <div className="flex items-center gap-3 pl-6 pr-20 py-6">
         <Avatar size="md" />
         <div>

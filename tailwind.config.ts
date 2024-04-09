@@ -39,6 +39,7 @@ const config: Config = {
       primary: '#00B207',
       subprimary: '#74E291',
       green100: '#618062',
+      blue: '#387ADF',
       orange: '#FF8A00',
       black: '#333333',
       white: '#FFFFFF',

@@ -25,9 +25,9 @@ import logo from '@/assets/images/logo.png';
 export const Search = () => {
   return (
     <div className="flex bg-white text-black items-center justify-between px-[150px] py-3">
-      <Link href="/" className="flex items-center gap-2">
-        <Image src={logo} alt="" className="w-8 h-8" />
-        <h1 className="text-xl font-bold">EcoEat</h1>
+      <Link href="/" className="flex items-center gap-2 text-xl font-bold">
+        <Image src={logo} height={0} width={0} alt="" className="w-8 h-8" />
+        EcoEat
       </Link>
       <div>
         <InputGroup borderRadius={5} size="md" width="600px">
@@ -65,11 +65,9 @@ export const Search = () => {
               <p className="text-sm text-white">2</p>
             </Center>
           </div>
-          <Link href="/cart">
-            <div className="flex flex-col items-start">
-              <p className="text-sm">Shopping Cart</p>
-              <p className="text-sm font-bold">$57.00</p>
-            </div>
+          <Link href="/cart" className="flex flex-col items-start">
+            <p className="text-sm">Shopping Cart</p>
+            <p className="text-sm font-bold">$57.00</p>
           </Link>
         </button>
       </div>
