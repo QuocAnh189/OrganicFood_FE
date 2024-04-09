@@ -84,7 +84,7 @@ export const Footer = () => {
       <div className="flex bg-black items-center justify-between px-[150px] py-10">
         <div className="flex flex-col items-start gap-3">
           <div className="flex items-center gap-2">
-            <Image src={logo} alt="" className="w-8 h-8" />
+            <Image src={logo} height={0} width={0} alt="" className="w-8 h-8" />
             <p className="text-white font-bold text-2xl">EcoEat</p>
           </div>
           <p className="text-gray500 text-sm max-w-80">
@@ -158,11 +158,41 @@ export const Footer = () => {
           EcoEat eCommerce © 2024. All Rights Reserved
         </p>
         <div className="flex items-center gap-2">
-          <Image src={applePay} className="w-12 h-[5] object-cover" alt="" />
-          <Image src={visaPay} className="w-12 h-[5] object-cover" alt="" />
-          <Image src={discoverPay} className="w-12 h-[5] object-cover" alt="" />
-          <Image src={masterCart} className="w-12 h-[5] object-cover" alt="" />
-          <Image src={secureCart} className="w-12 h-[5] object-cover" alt="" />
+          <Image
+            src={applePay}
+            height={0}
+            width={0}
+            className="w-14 h-8 object-contain"
+            alt=""
+          />
+          <Image
+            src={visaPay}
+            height={0}
+            width={0}
+            className="w-14 h-8 object-contain"
+            alt=""
+          />
+          <Image
+            src={discoverPay}
+            height={0}
+            width={0}
+            className="w-14 h-8 object-contain"
+            alt=""
+          />
+          <Image
+            src={masterCart}
+            height={0}
+            width={0}
+            className="w-14 h-8 object-contain"
+            alt=""
+          />
+          <Image
+            src={secureCart}
+            height={0}
+            width={0}
+            className="w-14 h-8 object-contain"
+            alt=""
+          />
         </div>
       </div>
     </>

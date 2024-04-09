@@ -34,7 +34,7 @@ export const Header = () => {
       <div className="flex items-center gap-2">
         <CiLocationOn />
         <p className="text-sm font-normal">
-          Bcons Green View , 113 Dong Hoa , Di An
+          UIT , 113 Han Thuyen , Thu Duc , Ho Chi Minh
         </p>
       </div>
       <div className="flex gap-3 text-sm">
@@ -74,14 +74,14 @@ export const Header = () => {
                 href="/signin"
                 className="hover:cursor-pointer hover:underline"
               >
-                <p>SignIn</p>
+                SignIn
               </Link>
               <span>/</span>
               <Link
                 href="/signup"
                 className="hover:cursor-pointer hover:underline"
               >
-                <p>SignUp</p>
+                SignUp
               </Link>
             </>
           )}

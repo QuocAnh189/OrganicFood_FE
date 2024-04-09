@@ -17,17 +17,17 @@ export const CardProduct = () => {
   return (
     <>
       <div
-        className="border border-gray300 rounded-md hover:cursor-pointer hover:bg-gray300"
+        className="border border-gray300 rounded-md hover:cursor-pointer hover:bg-gray300 z-10"
         onClick={onOpen}
       >
         <Image
           src="https://res.cloudinary.com/dadvtny30/image/upload/v1708061748/organicfood/product/cqodgw5bfg90smswkate.png"
           alt=""
-          width={200}
-          height={200}
+          width={0}
+          height={0}
           style={{ objectFit: 'cover' }}
           sizes="100vw"
-          className="w-full object-cover"
+          className="w-full z-[1]"
         />
         <div className="p-4 flex items-center justify-between">
           <div>

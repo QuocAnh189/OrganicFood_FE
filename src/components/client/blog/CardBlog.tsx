@@ -9,10 +9,7 @@ import { BiFoodMenu } from 'react-icons/bi';
 
 export const CardBlog = () => {
   return (
-    <Link
-      href="/blog/1"
-      className="flex flex-col items-center rounded-md shadow-md cursor-pointer"
-    >
+    <div className="flex flex-col items-center rounded-md shadow-md cursor-pointer">
       <Image
         src="https://res.cloudinary.com/dadvtny30/image/upload/v1708164998/organicfood/blog/dagngeybjorgnvug3prr.png"
         alt=""
@@ -41,13 +38,13 @@ export const CardBlog = () => {
           fermentum.
         </p>
         <Link
-          href="/"
+          href="/blog/1"
           className="flex text-primary items-center gap-2 py-2 hover:underline"
         >
           <p className="font-semibold"> Read More</p>
           <FaArrowRightLong />
         </Link>
       </div>
-    </Link>
+    </div>
   );
 };

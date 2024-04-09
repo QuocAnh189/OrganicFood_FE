@@ -48,6 +48,7 @@ export const ModalProduct = (props: ModalProductProp) => {
   const { isOpen, onClose } = props;
 
   const [activeThumb, setActiveThumb] = useState<any>();
+  const [quality, setQuality] = useState<number>(0);
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="5xl">
@@ -164,19 +165,25 @@ export const ModalProduct = (props: ModalProductProp) => {
               <Divider />
 
               <div className="py-2 flex items-center justify-between">
-                <div className="flex p-2  items-center gap-2 border border-solid border-gray300 rounded-3xl">
-                  <button className="flex items-center justify-center p-2 rounded-full bg-gray300">
+                <div className="w-[120px] flex p-2 items-center justify-around border border-solid border-gray300 rounded-3xl">
+                  <button
+                    onClick={() => setQuality(pre => pre - 1)}
+                    className="flex items-center justify-center p-2 rounded-full bg-gray300 hover:bg-gray200"
+                  >
                     <GrSubtract />
                   </button>
-                  <p>0</p>
-                  <button className="flex items-center justify-center p-2 rounded-full bg-gray300">
+                  <p>{quality}</p>
+                  <button
+                    onClick={() => setQuality(pre => pre + 1)}
+                    className="flex items-center justify-center p-2 rounded-full bg-gray300 hover:bg-gray200"
+                  >
                     <IoAdd />
                   </button>
                 </div>
-                <div className="px-16 py-2 bg-primary flex items-center gap-2 rounded-3xl">
+                <button className="px-16 py-2 bg-primary flex items-center gap-2 rounded-3xl hover:bg-subprimary">
                   <p className="text-white">Add to Cart</p>
                   <SlHandbag color="white" />
-                </div>
+                </button>
                 <div className="p-2 bg-primary/10 flex items-center justify-center rounded-full">
                   <CiHeart size="24px" color="#00B207" />
                 </div>
