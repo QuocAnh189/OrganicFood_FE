@@ -27,16 +27,12 @@ const AddressPage = () => {
           </button>
         </div>
         <div className="h-[1px] bg-gray300 px-12 my-6" />
-        <div className="flex flex-col gap-2">
-          <h1 className="text-xl">Address</h1>
-          <Address />
-          <Divider />
-          <Address />
+        <div className="flex flex-col flex-auto items-center">
+          You haven't address yet
         </div>
       </div>
-      <ModalAddress isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };
 
-export default AddressPage;
+export default Address;
